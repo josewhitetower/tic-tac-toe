@@ -8,8 +8,8 @@
 export default {
   name: 'Square',
   props: ['value'],
-   data() {
-     return {};
+  data() {
+    return {};
   },
 };
 </script>

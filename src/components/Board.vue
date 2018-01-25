@@ -1,3 +1,4 @@
+
 <template>
 <div>
    <div class="status">{{status}}</div>
@@ -27,6 +28,8 @@
 </template>
 
 <script>
+
+
 import Square from './Square';
 
 export default {
@@ -35,52 +38,56 @@ export default {
     Square,
   },
   data() {
-    return {         
-         squares : Array(9).fill(null),
-         xIsNext : true,
-        };
+    return {
+      squares: Array(9).fill(null),
+      xIsNext: true,
+    };
   },
-  computed :{
-      status() {
-        const winner = this.calculateWinner(this.squares);
-        if (winner) {
-              return `Winner: ${winner}`
-        }
-         return  `Next player ${this.xIsNext ? 'X': 'O'}`;
-      },
+  computed: {
+    status() {
+      const winner = this.calculateWinner(this.squares);
+      if (winner) {
+        return `Winner: ${winner}`;
+      }
+      return `Next player ${this.xIsNext ? 'X' : 'O'}`;
+    },
   },
   methods: {
-    handleClick(i){
-            if (this.calculateWinner(this.squares) || this.squares[i]) {
-               return;
-            }
-           const squares = this.squares.slice();          
-            squares[i] = this.xIsNext ? 'X': '0';
-            this.squares= squares;
-            this.xIsNext=!this.xIsNext;
+    handleClick(i) {
+      if (this.calculateWinner(this.squares) || this.squares[i]) {
+        return;
+      }
+      const squares = this.squares.slice();
+      squares[i] = this.xIsNext ? 'X' : '0';
+      this.squares = squares;
+      this.xIsNext = !this.xIsNext;
     },
-  calculateWinner(squares) {
-  const lines = [
-    [0, 1, 2],
-    [3, 4, 5],
-    [6, 7, 8],
-    [0, 3, 6],
-    [1, 4, 7],
-    [2, 5, 8],
-    [0, 4, 8],
-    [2, 4, 6],
-  ];
-  for (let i = 0; i < lines.length; i++) {
-    const [a, b, c] = lines[i];
-    if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
-      return squares[a];
-    }
-  }
-  return null;
-}
-  }
+    calculateWinner(squares) {
+      const lines = [
+        [0, 1, 2],
+        [3, 4, 5],
+        [6, 7, 8],
+        [0, 3, 6],
+        [1, 4, 7],
+        [2, 5, 8],
+        [0, 4, 8],
+        [2, 4, 6],
+      ];
+      // eslint-disable-next-line
+     for (let i = 0; i < lines.length; i++) {
+        const [a, b, c] = lines[i];
+        if (
+          squares[a] &&
+          squares[a] === squares[b] &&
+          squares[a] === squares[c]
+        ) {
+          return squares[a];
+        }
+      }
+      return null;
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-
