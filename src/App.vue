@@ -16,10 +16,10 @@
 import Board from './components/Board';
 
 export default {
-  name: 'App',
-  components: {
-    Board,
-  },
+    name: 'App',
+    components: {
+        Board,
+    },
 };
 </script>
 

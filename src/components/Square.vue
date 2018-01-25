@@ -6,11 +6,11 @@
 
 <script>
 export default {
-  name: 'Square',
-  props: ['value'],
-  data() {
-    return {};
-  },
+    name: 'Square',
+    props: ['value'],
+    data() {
+        return {};
+    },
 };
 </script>
 
