@@ -1,15 +1,15 @@
 <template>
     <div id="app">
-    <div class="game">
-        <div class="game-board">
-          <Board />
+        <div class="game">
+            <div class="game-board">
+                <Board />
+            </div>
+            <div class="game-info">
+                <div/>
+                <ol/>
+            </div>
         </div>
-        <div class="game-info">
-          <div></div>
-          <ol></ol>
-        </div>
-      </div>
-  </div>
+    </div>
 </template>
 
 <script>

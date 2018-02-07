@@ -26,7 +26,41 @@ module.exports = {
   // add your custom rules here
   rules: {
       // 4 spaces
-    "indent": [ 2, 4 ],
+      "indent": ["error", 4], //set indentation to 4 spaces
+      "no-underscore-dangle": ["error", {
+          "allowAfterThis": true
+      }],
+      "prefer-destructuring": ["error", {
+          "array": false,
+          "object": true
+      }],
+      "max-len": ["error", 100, 4, {
+          "ignoreUrls": true,
+          "ignoreComments": true,
+          "ignoreTrailingComments": true,
+          "ignoreRegExpLiterals": true,
+          "ignoreStrings": true,
+          "ignoreTemplateLiterals": true,
+      }],
+      "no-plusplus": ["error", {
+          "allowForLoopAfterthoughts": true
+      }],
+      'comma-dangle': ['error', {
+          arrays: 'always-multiline',
+          objects: 'always-multiline',
+          imports: 'always-multiline',
+          exports: 'always-multiline',
+          functions: 'never',
+      }],
+
+      //'plugin:vue/recommended' overrides
+      "vue/html-indent": ["error", 4, {
+          "attribute": 1,
+          "closeBracket": 0,
+          "alignAttributesVertically": true,
+          "ignores": []
+      }],
+      
     // don't require .vue extension when importing
     'import/extensions': ['error', 'always', {
       js: 'never',

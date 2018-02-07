@@ -1,13 +1,18 @@
 <template>
-   <button class="square">
-       {{value}}
-      </button>
+    <button class="square">
+        {{ value }}
+    </button>
 </template>
 
 <script>
 export default {
     name: 'Square',
-    props: ['value'],
+    props: {
+        values: {
+            type: String,
+            default: '',
+        },
+    },
     data() {
         return {};
     },

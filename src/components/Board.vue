@@ -1,28 +1,44 @@
 
 <template>
-<div>
-   <div class="status">{{status}}</div>
+    <div>
+        <div class="status">{{ status }}</div>
         <div class="board-row">
-        <square  :value= "squares[0]"  @click.native.once= "handleClick(0)"></square>
-        <!--The .native directive allows to listen for a
+            <square
+                :value= "squares[0]"
+                @click.native.once= "handleClick(0)"/>
+            <!--The .native directive allows to listen for a
         native event on the root element of a component-->
-        <square  :value= "squares[1]"  @click.native.once= "handleClick(1)"></square>
-        <square  :value= "squares[2]"  @click.native.once= "handleClick(2)"></square>
+            <square
+                :value= "squares[1]"
+                @click.native.once= "handleClick(1)"/>
+            <square
+                :value= "squares[2]"
+                @click.native.once= "handleClick(2)"/>
         </div>
         <div class="board-row">
-        <square  :value= "squares[3]" @click.native.once= "handleClick(3)"></square>
-         <square  :value= "squares[4]"  @click.native.once= "handleClick(4)"></square>
-          <square  :value= "squares[5]"  @click.native.once= "handleClick(5)"></square>
+            <square
+                :value= "squares[3]"
+                @click.native.once= "handleClick(3)"/>
+            <square
+                :value= "squares[4]"
+                @click.native.once= "handleClick(4)"/>
+            <square
+                :value= "squares[5]"
+                @click.native.once= "handleClick(5)"/>
         </div>
         <div class="board-row">
-          <square  :value= "squares[6]"  @click.native.once= "handleClick(6)"></square>
-           <square  :value= "squares[7]"  @click.native.once= "handleClick(7)"></square>
-            <square  :value= "squares[8]" @click.native.once= "handleClick(8)"></square>
+            <square
+                :value= "squares[6]"
+                @click.native.once= "handleClick(6)"/>
+            <square
+                :value= "squares[7]"
+                @click.native.once= "handleClick(7)"/>
+            <square
+                :value= "squares[8]"
+                @click.native.once= "handleClick(8)"/>
         </div>
-        <ul>
-
-</ul>
-</div>
+        <ul/>
+    </div>
 
 
 </template>
